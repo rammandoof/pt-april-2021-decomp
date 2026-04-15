@@ -1,0 +1,8 @@
+with (obj_timedgateclock)
+{
+    if (sprite_index != spr_button_pressed && sprite_index != spr_button_goingpressed)
+        sprite_index = spr_button_goingpressed;
+}
+
+global.timedgatetimer = 1;
+global.timedgatetime = time;
