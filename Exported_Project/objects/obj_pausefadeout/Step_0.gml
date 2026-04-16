@@ -13,8 +13,6 @@ if (fadealpha > 1 && !fadein)
         instance_deactivate_all(true);
         instance_activate_object(obj_pause);
         instance_activate_object(obj_inputAssigner);
-		instance_activate_object(obj_virtual_controller);
-		instance_activate_object(obj_virtual_controller_manager);
     }
     
     obj_pause.pause = !obj_pause.pause;
