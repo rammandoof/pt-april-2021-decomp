@@ -1,7 +1,7 @@
 if (ds_list_find_index(global.saveroom, id) == -1)
 {
     var objectlist = ds_list_create();
-    ds_list_add(objectlist, 182, 309, 319);
+    ds_list_add(objectlist, obj_baddie, obj_collect, obj_bigcollect);
     var instancelist = ds_list_create();
     
     for (var i = 0; i < ds_list_size(objectlist); i++)
@@ -19,7 +19,7 @@ if (ds_list_find_index(global.saveroom, id) == -1)
                 
                 switch (obj)
                 {
-                    case 182:
+                    case obj_baddie:
                         if (_currentobj.boundbox)
                             boundbox = 0;
                         

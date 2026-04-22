@@ -1,3 +1,3 @@
 event_inherited();
-spr_left = 4;
-spr_right = 3;
+spr_left = spr_railh2left;
+spr_right = spr_railh2right;

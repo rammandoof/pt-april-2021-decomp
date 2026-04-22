@@ -32,11 +32,7 @@ else
             
             scr_soundeffect(sfx_punch);
             
-            if (state == states.mach3)
-            {
-                instance_destroy(baddie);
-            }
-            else
+            if (state != states.mach3)
             {
                 var _hsp_multi = 2;
                 baddie.hsp = sign(baddie.x - x) * _hsp_multi;
@@ -50,9 +46,6 @@ else
                 baddie.inv_stun = 1;
                 baddie.inv_timer = baddie.inv_max;
                 baddie.hp--;
-                
-                if (baddie.hp <= 0)
-                    instance_destroy(baddie);
             }
             
             if (!baddie.important)
@@ -69,6 +62,9 @@ else
                 suplexmove = 0;
                 vsp = -11;
             }
+					
+			if(state == states.mach3 || baddie.hp <= 0)
+				instance_destroy(baddie);
         }
     }
 }
